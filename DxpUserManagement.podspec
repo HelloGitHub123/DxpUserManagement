@@ -143,8 +143,8 @@ Pod::Spec.new do |spec|
   # spec.dependency 'Masonry'
   # spec.dependency 'MJRefresh'
 
-  pod 'DXPNetWorkingManagerLib'
-  pod 'DXPToolsLib'
+  spec.dependency 'DXPNetWorkingManagerLib'
+  spec.dependency 'DXPToolsLib'
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
