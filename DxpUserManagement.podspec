@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "DxpUserManagement"
   spec.module_name  = "DxpUserManagement"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "Dxp User Management"
   spec.description  = "Dxp User Management SDK: User management, including login, logout, and device token reporting. Supports Swift projects via module import without a bridging header."
   spec.homepage     = "https://github.com/HelloGitHub123/DxpUserManagement"
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "12.0"
   spec.swift_version = "5.0"
-  spec.source       = { :git => "https://github.com/HelloGitHub123/DxpUserManagement.git", :tag => "1.0.2" }
+  spec.source       = { :git => "https://github.com/HelloGitHub123/DxpUserManagement.git", :tag => "1.0.3" }
 
   spec.source_files = "DxpUserManagement/**/*.{h,m,swift}"
   spec.public_header_files = [
