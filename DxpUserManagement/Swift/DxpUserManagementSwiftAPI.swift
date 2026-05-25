@@ -21,8 +21,8 @@ public extension DxpUserManagement {
         subsId: String,
         completion: @escaping (Result<DxpUserData, DxpUserManagementError>) -> Void
     ) {
-        login(
-            custNbr: custNbr,
+        DxpUserManagementSwiftBridge.login(
+            withCustNbr: custNbr,
             serviceNumber: serviceNumber,
             subsId: subsId
         ) { model, message in
@@ -40,8 +40,8 @@ public extension DxpUserManagement {
         pushServiceVendor: String,
         completion: @escaping (Result<DxpUserIdentityLogoutModel, DxpUserManagementError>) -> Void
     ) {
-        logout(
-            pushToken: pushToken,
+        DxpUserManagementSwiftBridge.logout(
+            withPushToken: pushToken,
             pushServiceVendor: pushServiceVendor
         ) { model, message in
             if let model {
@@ -58,8 +58,8 @@ public extension DxpUserManagement {
         pushServiceVendor: String,
         completion: @escaping (Result<DxpDeviceReportModel, DxpUserManagementError>) -> Void
     ) {
-        deviceTokenReport(
-            pushToken,
+        DxpUserManagementSwiftBridge.deviceTokenReport(
+            withPushToken: pushToken,
             pushServiceVendor: pushServiceVendor
         ) { model, message in
             if let model {
@@ -85,7 +85,7 @@ public extension DxpUserManagement {
                 custNbr: custNbr,
                 serviceNumber: serviceNumber,
                 subsId: subsId
-            ) { result in
+            ) { (result: Result<DxpUserData, DxpUserManagementError>) in
                 continuation.resume(with: result)
             }
         }
@@ -100,7 +100,7 @@ public extension DxpUserManagement {
             logout(
                 pushToken: pushToken,
                 pushServiceVendor: pushServiceVendor
-            ) { result in
+            ) { (result: Result<DxpUserIdentityLogoutModel, DxpUserManagementError>) in
                 continuation.resume(with: result)
             }
         }
@@ -115,7 +115,7 @@ public extension DxpUserManagement {
             deviceTokenReport(
                 pushToken,
                 pushServiceVendor: pushServiceVendor
-            ) { result in
+            ) { (result: Result<DxpDeviceReportModel, DxpUserManagementError>) in
                 continuation.resume(with: result)
             }
         }

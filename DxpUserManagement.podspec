@@ -19,12 +19,12 @@ Pod::Spec.new do |spec|
     "DxpUserManagement/Model/DxpDeviceReportModel.h",
     "DxpUserManagement/Model/DxpUserData.h",
     "DxpUserManagement/Model/DxpUserIdentityLogoutModel.h",
-    "DxpUserManagement/Utils/DxpUserDefaults.h"
+    "DxpUserManagement/Utils/DxpUserDefaults.h",
+    "DxpUserManagement/Swift/DxpUserManagementSwiftBridge.h"
   ]
   spec.private_header_files = [
     "DxpUserManagement/Model/HJRequestProtocolForVM.h"
   ]
-  spec.header_mappings_dir = "DxpUserManagement"
 
   spec.requires_arc = true
   spec.static_framework = true
