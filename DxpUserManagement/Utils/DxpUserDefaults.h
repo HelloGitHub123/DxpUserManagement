@@ -9,10 +9,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- * 基于 [NSUserDefaults standardUserDefaults] 的通用 key-value 存取工具。
- * 所有方法均为类方法，key 为空时不执行读写操作。
- */
 @interface DxpUserDefaults : NSObject
 
 #pragma mark - 通用

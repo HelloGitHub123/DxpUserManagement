@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HJRequestProtocolForVM.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

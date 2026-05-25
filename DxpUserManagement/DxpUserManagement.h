@@ -7,9 +7,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class DxpUserData;
-@class DxpUserIdentityLogoutModel;
-@class DxpDeviceReportModel;
+#import "DxpUserData.h"
+#import "DxpUserIdentityLogoutModel.h"
+#import "DxpDeviceReportModel.h"
+#import "DxpUserDefaults.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,18 +25,18 @@ typedef void (^DxpUserManagementDeviceReportCompletion)(DxpDeviceReportModel * _
 
 @interface DxpUserManagement : NSObject
 
-// 登录接口
+/// 登录接口
 + (void)login:(NSString *)custNbr
 serviceNumber:(NSString *)serviceNumber
        subsId:(NSString *)subsId
    completion:(nullable DxpUserManagementLoginCompletion)completion;
 
-// 登出
+/// 登出
 + (void)logout:(NSString *)pushToken
 pushServiceVendor:(NSString *)pushServiceVendor
         completion:(nullable DxpUserManagementLogoutCompletion)completion;
 
-// 上报接口
+/// 上报设备 Token
 + (void)deviceTokenReport:(NSString *)pushToken
         pushServiceVendor:(NSString *)pushServiceVendor
                completion:(nullable DxpUserManagementDeviceReportCompletion)completion;
